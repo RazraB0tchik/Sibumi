@@ -1,0 +1,121 @@
+.links_menu{
+    width: 85%;
+    min-width: 800px;
+    height: auto;
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.inside_link_pool{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.element_link{
+    /*background-color: purple;*/
+    height: 2.5vw;
+    width: 6vw;
+}
+
+.button_link{
+    height: 100%;
+    width: 100%;
+    font-family: 'Conv_SFUIText-Medium', sans-serif;
+    border-radius: 10vw;
+    border-color: #403f3d;
+    border-width: 1.5px;
+    font-size: 1vw;
+    border-style: none;
+    color: #403f3d;
+    cursor: pointer;
+    background-color: white;
+    text-align: center;
+}
+.button_active{
+    height: 100%;
+    width: 100%;
+    font-family: 'Conv_SFUIText-Medium', sans-serif;
+    border-radius: 10vw;
+    border-color: #403f3d;
+    border-width: 1.5px;
+    font-size: 1vw;
+    border-style: solid;
+    color: #403f3d;
+    cursor: pointer;
+    background-color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 1300px) {
+    .element_link{
+        /*background-color: purple;*/
+        height: 3.5vw;
+        width: 9vw;
+    }
+    .button_link{
+        font-size: 1.5vw;
+    }
+    .button_active{
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .links_menu{
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .links_menu{
+        width: 95%;
+        overflow-x: scroll;
+        /*justify-content: normal;*/
+        /*align-items: center;*/
+    }
+    .element_link{
+        margin-top: 10px;
+        height: 4vw;
+        min-height: 30px;
+        min-width: 80px;
+        width: 11vw;
+        margin-right: 20px;
+    }
+    .button_link{
+        font-size: 2vw;
+    }
+    .button_active{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .links_menu{
+        width: 85%;
+        overflow-x: scroll;
+        /*justify-content: normal;*/
+        /*align-items: center;*/
+    }
+    .element_link{
+        margin-top: 10px;
+        height: 4vw;
+        min-height: 30px;
+        min-width: 80px;
+        width: 11vw;
+        margin-right: 20px;
+    }
+    .button_link{
+        font-size: 2.5vw;
+    }
+    .button_active{
+        font-size: 2.5vw;
+    }
+}
