@@ -54,7 +54,7 @@ const FormToReserveTable = ({active, setActive, place}) => {
             opacity: 1,
         },
         close:{
-            y: "100%",
+            y: "130%",
             opacity: 0,
         }
     }

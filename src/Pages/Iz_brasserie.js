@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../fonts/fonts.css'
 // import {Dimensions} from "react-native-web";
 import '../IzBrasserie/css/IzBrasserie.css'
@@ -23,13 +23,29 @@ import DelivaryComponent from "../IzBrasserie/DelivaryComponent";
 // import Slider from "./Slider";
 import Footer from "../Footer/Footer"
 import LineImg from "../IzBrasserie/LineImg";
+import Slider from "./Slider";
+import {Dimensions} from "react-native-web";
+import pic1 from "../picture_izBrazzerie/mini_one.png";
+import pic2 from "../picture_izBrazzerie/mini_two.png";
+import pic3 from "../picture_izBrazzerie/mini_third.png";
+import pic4 from "../picture_izBrazzerie/mini_fours.png";
+import pic5 from "../picture_izBrazzerie/mini_fives.png";
+import pic6 from "../picture_izBrazzerie/mini_six.png";
+import pic7 from "../picture_izBrazzerie/mini_seven.png";
+import pic8 from "../picture_izBrazzerie/mini_eight.png";
+import pic9 from "../picture_izBrazzerie/mini_nine.png";
+import pic10 from "../picture_izBrazzerie/mini_ten.png";
+import pic11 from "../picture_izBrazzerie/mini_eleven.jpg";
+import pic12 from "../picture_izBrazzerie/mini_twelve.png";
+import pic13 from "../picture_izBrazzerie/mini_thirteen.png";
 const IzBrasserie = () => {
 
-    // const [state, setState] = useState(Dimensions.get('window').width);
-    // window.addEventListener('resize', update);
-    // function update() {
-    //     setState(window.innerWidth);
-    // }
+    // eslint-disable-next-line no-undef
+    const [state, setState] = useState(Dimensions.get('window').width);
+    window.addEventListener('resize', update);
+    function update() {
+        setState(window.innerWidth);
+    }
 
     let lines = [
         {id: 1, signature: "Здесь будет какой-то текст"},
@@ -38,42 +54,28 @@ const IzBrasserie = () => {
     ]
 
     let delivery = [
-        {id: 1, text:"Здесь говорится, как ресторан быстро делает доставку, надеюсь это действительно быстро. надеюсь это действительно быстро.", style_delivery: "delivery_block1"},
+        {id: 1, text:"Здесь говорится, как ресторан .", style_delivery: "delivery_block1"},
         {id: 2, text:"Здесь говорится, как ресторан быстро делает доставку, надеюсь это действительно быстро. надеюсь это действительно быстро.", style_delivery: "delivery_block2"},
         {id: 3, text:"Здесь говорится, как ресторан быстро делает доставку, надеюсь это действительно быстро. надеюсь это действительно быстро.", style_delivery: "delivery_block3"},
     ]
 
     let pictures = [
-        {id: 1, img: img_two_slider, img_png: img_two_slider_png},
-        {id: 2, img: img_three_slider, img_png: img_three_slider_png},
-        {id: 3, img: img_four_slider, img_png: img_four_slider_png},
-        {id: 4, img: img_one, img_png: img_one_png},
-        {id: 5, img: img_two_slider, img_png: img_two_slider_png},
-        {id: 6, img: img_three_slider, img_png: img_three_slider_png},
-        {id: 7, img: img_four_slider, img_png: img_four_slider_png},
-        {id: 8, img: img_one, img_png: img_one_png},
-        {id: 9, img: img_two_slider, img_png: img_two_slider_png},
-        {id: 10, img: img_three_slider, img_png: img_three_slider_png},
-        {id: 11, img: img_four_slider, img_png: img_four_slider_png},
-        {id: 12, img: img_one, img_png: img_one_png},
-        {id: 13, img: img_two_slider, img_png: img_two_slider_png},
-        {id: 14, img: img_three_slider, img_png: img_three_slider_png},
-        {id: 15, img: img_four_slider, img_png: img_four_slider_png},
-        {id: 16, img: img_two_slider, img_png: img_two_slider_png},
-        {id: 17, img: img_three_slider, img_png: img_three_slider_png},
-        {id: 18, img: img_four_slider, img_png: img_four_slider_png},
-        {id: 19, img: img_one, img_png: img_one_png},
-        {id: 20, img: img_two_slider, img_png: img_two_slider_png},
-        {id: 21, img: img_three_slider, img_png: img_three_slider_png},
-        {id: 22, img: img_four_slider, img_png: img_four_slider_png},
-        {id: 23, img: img_one, img_png: img_one_png},
-        {id: 24, img: img_two_slider, img_png: img_two_slider_png},
-        {id: 25, img: img_three_slider, img_png: img_three_slider_png},
-        {id: 26, img: img_four_slider, img_png: img_four_slider_png},
-        {id: 27, img: img_one, img_png: img_one_png},
-        {id: 28, img: img_two_slider, img_png: img_two_slider_png},
-        {id: 29, img: img_three_slider, img_png: img_three_slider_png},
-        {id: 30, img: img_four_slider, img_png: img_four_slider_png},
+        {id: 1, img: pic1, nmb: 1},
+        {id: 2, img: pic2, nmb: 2},
+        {id: 3, img: pic3, nmb: 3},
+        {id: 4, img: pic4, nmb: 4},
+        {id: 5, img: pic5, nmb: 5},
+        {id: 6, img: pic6, nmb: 6},
+        {id: 7, img: pic7, nmb: 7},
+        {id: 8, img: pic8, nmb: 8},
+        {id: 9, img: pic9, nmb: 9},
+        {id: 10, img: pic10, nmb: 10},
+        {id: 11, img: pic11, nmb: 11},
+        {id: 12, img: pic12, nmb: 12},
+        {id: 13, img: pic13, nmb: 13},
+        {id: 14, img: pic1, nmb: 14},
+        // {id: 15, img: pic2, nmb: 15},
+        // {id: 16, img: pic3, nmb: 1},
     ]
 
     return (
@@ -81,7 +83,7 @@ const IzBrasserie = () => {
 
             <link rel="preload" as="image" href={img_one}/>
 
-            <Header bold_block={2} style_element="main_style"/>
+            <Header bold_block={1} style_element="main_style"/>
 
             <div className="mainField">
 
@@ -110,9 +112,9 @@ const IzBrasserie = () => {
                 </div>
 
 
-                {/*<div className="personal">*/}
-                {/*    <Slider width_window={state}/>*/}
-                {/*</div>*/}
+            {/*    /!*<div className="personal">*!/*/}
+            {/*    /!*    <Slider width_window={state}/>*!/*/}
+            {/*    /!*</div>*!/*/}
 
                 <div className="footer">
                     <Footer/>

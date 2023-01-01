@@ -4,9 +4,14 @@ import basket_img from "../HeaderBlock/pictures_footer/Корзина.webp"
 import basket_img_png from "../HeaderBlock/pictures_footer/Корзина (1).png"
 import ButtonCount from "./Button_Count"
 import {motion} from "framer-motion";
+import {Provider, useDispatch, useSelector} from "react-redux";
+import {store} from "../Pages/CalculateBasket";
+
 const CardMenu = (props) => {
 
     const [selectImg, setSelectImg] = useState(false);
+
+    console.log(selectImg + " selectElem")
 
     const changeButton ={
         close:{
@@ -22,6 +27,15 @@ const CardMenu = (props) => {
             opacity: 1,
         }
     }
+
+    const [countAdd, setCountAdd] = useState(1);
+    const dispatch = useDispatch();
+
+    function addElementInBasket(){
+        setSelectImg(!selectImg);
+        dispatch({type: "ADD_ELEM", name: props.element.name, img: props.element.img, price: props.element.price, id: props.element.id, count: countAdd});
+    }
+
 
     return (
         <motion.div className="card_block" animate={{opacity: 1}} initial={{opacity:0}} transition={{duration: 1, delay: 0.4}}>
@@ -44,14 +58,14 @@ const CardMenu = (props) => {
             <div className="text_block">
                 <div className="block_with_text_menuElem">
                     <div className="name_elem_menu">
-                        {props.element.text_elem}
+                        {props.element.name}
                     </div>
                     <div className="prise_block">
                         {props.element.prise}
                     </div>
                 </div>
                 <div className="block_with_icon">
-                    <motion.div className={"inside_basket_block"} onClick={()=>setSelectImg(!selectImg)} variants={changeButton} animate={selectImg ? "close" : "open"} transition={{duration: 1}}>
+                    <motion.div className={"inside_basket_block"} onClick={addElementInBasket} variants={changeButton} animate={selectImg ? "close" : "open"} transition={{duration: 1}}>
 
                         <picture>
                             <source srcSet={basket_img} type="image/webp"/>
@@ -61,8 +75,10 @@ const CardMenu = (props) => {
 
                     </motion.div>
 
-                    <motion.div className="button_count_block" variants={changeCountButton} initial={{opacity: 0, display: "none", rotateX: "180deg"}} animate={selectImg ?  "open" : "close"} transition={{duration: 1.5}}>
-                        <ButtonCount ct={props.element.nb} sum={props.element.summa}/>
+                    <motion.div className="button_count_block" variants={changeCountButton} initial={{opacity: 0, display: "none", rotateX: "180deg"}} animate={selectImg ?  "open" : "close"} transition={{duration: 0.5, delay: 1}}>
+                        <Provider store={store}>
+                        <ButtonCount name = {props.element.name} img={props.element.img_elem} price={props.element.prise} id={props.element.id}/>
+                        </Provider>
                     </motion.div>
                 </div>
             </div>

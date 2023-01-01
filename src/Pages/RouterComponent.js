@@ -16,7 +16,7 @@ const RouterComponent = () => {
                 {/* eslint-disable-next-line react/jsx-pascal-case */}
                 <Route path="/iz_brazeri" element={<Iz_brasserie/>} />,
                 <Route path="/service" element={<ServicePage/>} />
-                <Route path="/main" element={<Main/>} />
+                <Route path="/" element={<Main/>} />
                 <Route path="/contact" element={<Contact/>} />
                 <Route path="/menu" element={<Menu/>}/>
                 <Route path="/basket" element={<Basket/>}/>

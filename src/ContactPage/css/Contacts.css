@@ -10,6 +10,11 @@
     justify-content: left;
     flex-direction: column;
 }
+
+html{
+    overflow-y: scroll!important;
+}
+
 .restorans{
     left: 15%;
     width: 85%;

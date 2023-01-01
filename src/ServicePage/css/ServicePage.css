@@ -1,5 +1,8 @@
 /*Блок с картинкой и текстом*/
 
+html{
+    overflow-y: scroll!important;
+}
 .service_main_pool{
     position: absolute;
     left: 0;

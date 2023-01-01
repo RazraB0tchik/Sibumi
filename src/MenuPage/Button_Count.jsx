@@ -1,48 +1,30 @@
 import React from 'react';
 import {useState} from "react";
 import {motion} from "framer-motion";
+import {useDispatch, useSelector} from "react-redux";
 
-const ButtonCount = ({ct, sum}) => {
+const ButtonCount = ({name, img, price, id}) => {
 
-    // let prise = props.element.prise;
-    // eslint-disable-next-line no-unused-vars
-    let nb = ct;
-    // eslint-disable-next-line no-unused-vars
-    // let summa = sum;
+    const [countAdd, setCountAdd] = useState(1);
+    const dispatch = useDispatch()
+    // const elemList = useSelector(state => state)
 
-
-    const [count, setCount] = useState(1);
-    // const [priseRes, setPriseRes] = useState(prise);
-    // eslint-disable-next-line no-unused-vars
-    // let num;
     function plusElement(){
-        priceAccountPlus();
-        nb++;
-        return setCount(count+1);
+        setCountAdd(countAdd+1);
+        dispatch({type: "UPDATE_ELEM", id: id})
     }
     function minusElement(){
-        if(count>1) {
-            priceAccountMinus();
-            nb--;
-            return setCount(count - 1);
+        if(countAdd>1) {
+            setCountAdd(countAdd-1);
+            dispatch({type: "DELETE_ELEM", id: id})
         }
-    }
-    function priceAccountPlus(){
-        // setPriseRes(priseRes + prise);
-        // summa+=priseRes;
-
-    }
-    function priceAccountMinus(){
-        // num = prise;
-        // setPriseRes(priseRes - prise);
-        // summa-=priseRes;
     }
 
 
     return (
         <div className="button_count">
             <motion.div className="plus_button" whileHover={{opacity: 0.5}} transition={{duration: 0.3}} onClick={minusElement}>-</motion.div>
-            <div className="count">{count}</div>
+            <div className="count">{countAdd}</div>
             <motion.div className="minus_button" whileHover={{opacity: 0.5}} transition={{duration: 0.3}} onClick={plusElement}>+</motion.div>
         </div>
     );

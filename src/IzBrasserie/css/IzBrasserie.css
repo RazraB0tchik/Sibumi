@@ -5,6 +5,11 @@
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
+
+html{
+    overflow-y: scroll!important;
+}
+
 .mainField{
     position: absolute;
     left: 0;
@@ -294,6 +299,7 @@
     font-size: 30px;
     border-style: none;
     background-color: rgba(255,255,255,0.0);
+    cursor: pointer;
 }
 /*@keyframes lineImg_animation {*/
 /*    0% {*/
@@ -438,6 +444,7 @@
     }
     .text_delivery{
         width: 60%;
+        background-color: blueviolet;
     }
 
     .delivery{

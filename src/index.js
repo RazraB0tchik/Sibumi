@@ -11,5 +11,5 @@ import MenuPage from "./Pages/MenuPage"
 const rootElem = document.getElementById('root');
 const root = createRoot(rootElem);
 root.render(
-    <RouterComponent/>
+    <Iz_brasserie/>
 );

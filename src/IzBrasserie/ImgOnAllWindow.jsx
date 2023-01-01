@@ -14,8 +14,6 @@ const ImgOnAllWindow = ({active, setActive, img, img_png, activePool}) => {
         }
     }
 
-    console.log(active)
-
     const setParamsImg = () => {
         setActive(!active);
         activePool(false);
@@ -23,7 +21,7 @@ const ImgOnAllWindow = ({active, setActive, img, img_png, activePool}) => {
     }
 
     return (
-        <motion.div className= {(active && (window.innerWidth>800)) ? "windowAll active" : "windowAll"}>
+        <motion.div className= {(active && (window.innerWidth>800)) ? "windowAll active" : "windowAll"} onClick={setParamsImg}>
             <motion.div className="windowImg" variants={variantImg} animate={active ? "visible" : "notVisible"} transition={{duration: 0.9}}>
                 <picture>
                     <source srcSet={img} type="image/webp"/>
@@ -31,8 +29,6 @@ const ImgOnAllWindow = ({active, setActive, img, img_png, activePool}) => {
                     <img className="pictureOnWindow"  src={img} alt="big_picture"/>
                 </picture>
             </motion.div>
-
-            <button className="closeWindowImg" onClick={setParamsImg}>Закрыть</button>
         </motion.div>
     );
 };

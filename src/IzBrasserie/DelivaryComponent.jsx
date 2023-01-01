@@ -16,9 +16,9 @@ const DelivaryComponent = (props) => {
     }
     const transition_option = (element) => {
         switch (element){
-            case 1: return {duration: 1};
-            case 2: return  {duration: 1, delay: 0.5};
-            case 3: return {duration: 1, delay: 1};
+            case 1: return {duration: 1, delay: 1};
+            case 2: return  {duration: 1, delay: 1.5};
+            case 3: return {duration: 1, delay: 2};
             default: return "error";
         }
     }

@@ -13,7 +13,7 @@ const HistoryImg = ({history_or_legend_img, history_or_legend_img_png, text1, te
     if(legend===0) {
         return (
             <motion.div className="history_img" whileInView={'visible'} initial={'notVisible'}
-                        viewport={{ once: true, amount: 0.1}} variants={variantHistoryImg} transition={{duration: 1.5}}>
+                        viewport={{ once: true, amount: 0.1}} variants={variantHistoryImg} transition={{duration: 1}}>
 
                 <picture>
                     <source srcSet={history_or_legend_img} type="image/webp"/>

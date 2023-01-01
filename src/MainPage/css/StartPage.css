@@ -1,6 +1,11 @@
 
-::-webkit-scrollbar {
-    width: 0;
+
+/*::-webkit-scrollbar{*/
+/*    width: 0;*/
+/*}*/
+
+html{
+    overflow-y: hidden;
 }
 
 /*первый блок*/
@@ -46,11 +51,13 @@
     width: 100%;
     height: 100%;
     margin-top: 140px;
+    filter: grayscale(0.8);
     /*margin-top: 140px;*/
 }
 .map_element_standart{
     width: 100%;
     height: 105%;
+    filter: grayscale(0.8);
 }
 
 /*.main_map_block{*/

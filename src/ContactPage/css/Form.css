@@ -150,15 +150,15 @@
 .buttonOne{
     position: absolute;
     background-color: rgb(206, 189, 160);
-    width: 19vh;
-    height: 19vh;
+    width: 16vh;
+    height: 16vh;
     border-radius: 50%;
     border-style: none;
     font-family: 'Conv_SFUIText-Light', sans-serif;
     font-size: 1.6em;
     font-weight: bold;
     left: 65%;
-    top: 75%;
+    top: 80%;
     color: white;
     min-width: 220px;
     min-height: 220px;
@@ -169,15 +169,15 @@
 .buttonTwo{
     position: absolute;
     background-color: rgb(206, 189, 160);
-    width: 19vh;
-    height: 19vh;
+    width: 16vh;
+    height: 16vh;
     border-radius: 50%;
     border-style: none;
     font-family: 'Conv_SFUIText-Light', sans-serif;
     font-size: 1.6em;
     font-weight: bold;
     left: 65%;
-    top: 75%;
+    top: 80%;
     color: white;
     min-width: 220px;
     min-height: 220px;
@@ -188,15 +188,15 @@
 .buttonThree{
     position: absolute;
     background-color: rgb(206, 189, 160);
-    width: 19vh;
-    height: 19vh;
+    width: 16vh;
+    height: 16vh;
     border-radius: 50%;
     border-style: none;
     font-family: 'Conv_SFUIText-Light', sans-serif;
     font-size: 1.6em;
     font-weight: bold;
     left: 65%;
-    top: 75%;
+    top: 80%;
     color: white;
     min-width: 220px;
     min-height: 220px;

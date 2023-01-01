@@ -18,13 +18,13 @@ const BasketAndBurger = () => {
         <div className="block_with_buttons">
             <div className="animated_basket">
                 <div className="img_busket_anim">
-
+                    <a href="/basket">
                     <picture>
                         <source srcSet={busket_img} type="image/webp"/>
                         <source srcSet={busket_img_png} type="image/png"/>
                         <img className="img_basket" src={busket_img} alt="busket button"/>
                     </picture>
-
+                    </a>
                 </div>
                 <div className="counter_busket"><div className="count_in_busket">2</div></div>
                 <motion.div className="circular" animate={{rotate: 360}} transition={{duration: 55, delay: 0, repeat: Infinity, ease: "linear"}}>
@@ -40,7 +40,7 @@ const BasketAndBurger = () => {
             </div>
 
             <div className="mobile_buttons">
-                <div className="basket"><img className="busket_img" src={busket_img} alt="busket_img"/></div>
+                <div className="basket"><a href="/basket"><img className="busket_img" src={busket_img} alt="busket_img"/></a></div>
                 <div onClick={setOptions} className="burger">
 
                     <picture>

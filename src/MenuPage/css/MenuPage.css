@@ -1,3 +1,7 @@
+html{
+    overflow-y: scroll!important;
+}
+
 .menu_inside_block{
     position: absolute;
     left: 0;
@@ -50,21 +54,26 @@
     height: auto;
     align-items: center;
     margin-left: 4vw;
+    /*background-color: blueviolet;*/
 }
 
 .block_logo_one{
-    width: 15vw;
+    width: 27%;
     height: 6vw;
-    /*max-width: 280px;*/
+    /*margin-right: 10vw;*/
+    /*background-color: #007aff;*/
+    /*max-width: 250px;*/
     /*min-width: 225px;*/
     /*max-height: 100px;*/
 }
 .block_logo_two{
-    width: 15vw;
+    width: 27%;
     height: 6vw;
+    /*margin-right: 10vw;*/
+    /*background-color: #007aff;*/
 }
 .block_logo_three{
-    width: 15vw;
+    width: 27%;
     height: 6vw;
 }
 
@@ -123,16 +132,20 @@
     .block_logo_one{
         width: 23vw;
         height: 9vw;
-        min-width: 150px;
-        min-height: 60px;
+        /*min-width: 150px;*/
+        /*min-height: 60px;*/
     }
     .block_logo_two{
         width: 23vw;
         height: 9vw;
+        /*min-width: 150px;*/
+        /*min-height: 60px;*/
     }
     .block_logo_three{
         width: 23vw;
         height: 9vw;
+        /*min-width: 150px;*/
+        /*min-height: 60px;*/
     }
 }
 
@@ -195,7 +208,7 @@
 .page_with_positionElem{
     width: 100%;
     height: auto;
-    margin-top: 50px;
+    margin-top: 2.5vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -208,23 +221,29 @@
             /*justify-content: space-around;*/
         }
     .block_logo_one{
-        width: 35vw;
-        height: 15vw;
-        /*min-width: 150px;*/
-        /*min-height: 60px;*/
+        width: 30vw;
+        height: 10vw;
+        margin-right: 10vw;
+        min-width: 150px;
+        min-height: 60px;
 
     }
     .block_logo_two{
-        width: 40vw;
-        height: 15vw;
+        width: 30vw;
+        height: 10vw;
+        min-width: 150px;
+        min-height: 60px;
+        margin-right: 10vw;
+    }
+    .block_logo_three{
+        width: 30vw;
+        height: 10vw;
         min-width: 150px;
         min-height: 60px;
     }
-    .block_logo_three{
-        width: 40vw;
-        height: 15vw;
-        min-width: 150px;
-        min-height: 60px;
+    .second_inside_block_for_logo{
+       overflow: hidden;
+        justify-content: normal;
     }
 }
 

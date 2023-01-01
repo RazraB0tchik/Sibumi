@@ -15,7 +15,7 @@ const HistoryAndLegend = ({title, text, legend}) => {
     if(legend===0) {
         return (
             <motion.div className="text_legend_history" whileInView={'visible'} initial={'notVisible'}
-                        viewport={{ once: true, amount: 0.1}} variants={variantHistoryText} transition={{duration: 1.5}}>
+                        viewport={{ once: true, amount: 0.9}} variants={variantHistoryText} transition={{duration: 1.5}}>
                 <div className="title_history">{title}</div>
                 <div className="text_history">{text}</div>
             </motion.div>
@@ -24,7 +24,7 @@ const HistoryAndLegend = ({title, text, legend}) => {
     else{
         return (
             <motion.div className="legendText" whileInView={'visible'} initial={'notVisible'}
-                        viewport={{ once: true, amount: 0.1}} variants={variantHistoryText} transition={{duration: 1.5}}>
+                        viewport={{ once: true, amount: 0.9}} variants={variantHistoryText} transition={{duration: 1.5}}>
                 <h2 className="title_history">{title}</h2>
                 <div className="text_history">{text}</div>
             </motion.div>

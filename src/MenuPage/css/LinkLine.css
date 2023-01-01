@@ -1,6 +1,25 @@
+
+.links_menu::-webkit-scrollbar { width: 0; }
+
+.links_menu { -ms-overflow-style: none; }
+
+
 .links_menu{
     width: 85%;
-    min-width: 800px;
+    min-width: 770px;
+    height: auto!important;
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*justify-content: space-between;*/
+    overflow: hidden;
+    overflow-x: scroll;
+}
+.links_restaurant_cards{
+    width: auto;
+    /*min-width: 800px;*/
     height: auto;
     position: relative;
     top: 0;
@@ -9,8 +28,18 @@
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    overflow-x: scroll;
 }
 .inside_link_pool{
+    /*margin-top: 1vh;*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*background-color: blue;*/
+}
+.inside_link_pool_restaurants{
     width: 100%;
     height: 100%;
     display: flex;
@@ -19,32 +48,43 @@
     justify-content: space-between;
 }
 .element_link{
-    /*background-color: purple;*/
-    height: 2.5vw;
-    width: 6vw;
+    text-overflow: ellipsis;
+    /*overflow: hidden;*/
+    white-space: nowrap;
+    position: relative;
+    z-index: 50;
+    height: 3vw;
+    /*max-height: 50px;*/
+    width: auto!important;
+    /*background-color: blueviolet;*/
+    margin-right: 4vw;
 }
 
 .button_link{
     height: 100%;
-    width: 100%;
+    width: 115%;
     font-family: 'Conv_SFUIText-Medium', sans-serif;
     border-radius: 10vw;
     border-color: #403f3d;
-    border-width: 1.5px;
+    border-width: 1.8px;
     font-size: 1vw;
     border-style: none;
     color: #403f3d;
     cursor: pointer;
     background-color: white;
     text-align: center;
+    position: relative;
+    z-index: 101;
 }
 .button_active{
     height: 100%;
-    width: 100%;
+    width: 115%;
+    position: relative;
+    z-index: 101;
     font-family: 'Conv_SFUIText-Medium', sans-serif;
     border-radius: 10vw;
     border-color: #403f3d;
-    border-width: 1.5px;
+    border-width: 1.8px;
     font-size: 1vw;
     border-style: solid;
     color: #403f3d;
@@ -54,10 +94,13 @@
 }
 
 @media screen and (max-width: 1300px) {
+    .inside_link_pool{
+        width: 90%;
+    }
     .element_link{
-        /*background-color: purple;*/
-        height: 3.5vw;
-        width: 9vw;
+        height: 4vw;
+        margin-right: 5vw;
+        max-height: 70px;
     }
     .button_link{
         font-size: 1.5vw;
@@ -70,52 +113,43 @@
 @media screen and (max-width: 1000px){
     .links_menu{
         min-width: 0;
-        width: 100%;
+        width: 93%;
     }
 }
 
 @media screen and (max-width: 890px) {
-    .links_menu{
-        width: 95%;
-        overflow-x: scroll;
-        /*justify-content: normal;*/
-        /*align-items: center;*/
-    }
     .element_link{
-        margin-top: 10px;
-        height: 4vw;
-        min-height: 30px;
-        min-width: 80px;
-        width: 11vw;
-        margin-right: 20px;
+        /*width: 11vw;*/
+        /*margin-right: 6vw;*/
     }
-    .button_link{
-        font-size: 2vw;
-    }
-    .button_active{
-        font-size: 2vw;
-    }
+    /*.button_link{*/
+    /*    font-size: 2vw;*/
+    /*}*/
+    /*.button_active{*/
+    /*    font-size: 2vw;*/
+    /*}*/
 }
 
 @media screen and (max-width: 550px) {
     .links_menu{
-        width: 85%;
+        width: 90%;
         overflow-x: scroll;
         /*justify-content: normal;*/
         /*align-items: center;*/
     }
     .element_link{
-        margin-top: 10px;
-        height: 4vw;
+        /*height: 4vw;*/
         min-height: 30px;
-        min-width: 80px;
-        width: 11vw;
-        margin-right: 20px;
+        margin-right: 8vw;
+       height: 8vw;
+        /*min-width: 80px;*/
+        /*margin-right: 20px;*/
+        /*background-color: blue;*/
     }
     .button_link{
-        font-size: 2.5vw;
+        font-size: 3.2vw;
     }
     .button_active{
-        font-size: 2.5vw;
+        font-size: 3.2vw;
     }
 }

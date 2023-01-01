@@ -12,7 +12,8 @@ import IzBrasserie_block from "../MenuPage/Block_For_IzBrasserie"
 import Sibumi_block from "../MenuPage/Block_For_Sibumi"
 import {motion} from "framer-motion";
 import {Dimensions} from "react-native-web";
-import Slider from "./Slider";
+// import Slider from "./Slider";
+import LineWithRestaurant from "../MenuPage/Line_With_Restaurants";
 import Footer from "../Footer/Footer";
 import Konditoriya from "../MenuPage/Block_For_Canditoriya"
 
@@ -59,7 +60,8 @@ const MenuPage = () => {
                         <div className="fake_block"/>
                         <div className="inside_block_logo">
                             <motion.div className="second_inside_block_for_logo" animate={{y:0, opacity: 1}} initial={{y:100, opacity: 0}} transition={{duration: 1}}>
-                                <Slider page_type="menu" list={listRest} setClickOne={setClickBlockOne} setClickTwo={setClickBlockTwo} setClickThree={setClickBlockThree}/>
+                                {/*<Slider page_type="menu" list={listRest} setClickOne={setClickBlockOne} setClickTwo={setClickBlockTwo} setClickThree={setClickBlockThree}/>*/}
+                                <LineWithRestaurant page_type="menu" list={listRest} setClickOne={setClickBlockOne} setClickTwo={setClickBlockTwo} setClickThree={setClickBlockThree}/>
                             </motion.div>
                         </div>
                     </div>
